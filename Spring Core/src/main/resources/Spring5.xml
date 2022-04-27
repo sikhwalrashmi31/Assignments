@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans	xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+			xmlns:context="http://www.springframework.org/schema/context">
+			
+			<context:annotation-config/>
+			
+	<bean id = "votercard" class = "springCoreQ5.VCard">
+		<property name="vNumber"	value="23574" /> 
+	</bean>
+	<bean id = "employee" class = "springCoreQ5.Employee">
+		<property name="empId" value="1"/>
+		<property name="empName" value="Mahek Pandya"/>
+		<property name="votercard" ref="votercard"/>
+	</bean>
+</beans>
